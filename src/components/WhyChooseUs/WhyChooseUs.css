@@ -1,0 +1,44 @@
+.choose-container {
+    margin-top: 80px;
+}
+.choose-icon {
+    font-size: 45px;
+    color: #f8c63b;
+}
+.choose-card {
+    text-align: center;
+    border: none;
+}
+.choose-header {
+    font-weight: 700;
+    border-bottom: 3px solid black;
+    width: 30%;
+    font-size: 30px;
+    display: block;
+    margin: auto;
+    margin-bottom: 40px;
+    text-align: center;
+}
+.choose-title {
+    font-weight: 600;
+    font-size: 20px;
+}
+.choose-text {
+    font-size: 15px;
+    font-weight: 400;
+}
+@media only screen and (max-width: 575px) {
+    .choose-header {
+        width: 60%;
+        font-size: 20px;
+    }   
+    .choose-title {
+        font-size: 15px;
+    }
+    .choose-text {
+        font-size: 12px;
+    }
+    .choose-card {
+        width: 70%;
+    }
+}

@@ -1,0 +1,79 @@
+/* Header section styles  */
+.nav-link {
+    color: white !important;
+    font-weight: 500;
+}
+.nav-item {
+    display: block;
+    margin: auto;
+}
+.navbar-brand img{
+    width: 70px;
+}
+.user-name {
+    margin: 0;
+    color: black;
+    font-weight: 500;
+    display: inline-block;
+}
+.logout-btn {
+    margin-left: 10px;
+    font-weight: 500;
+}
+.nav-link::after {
+    content: '';
+    display: block;
+    width: 0%;
+    background-color: rgb(204, 67, 17);
+    margin: auto;
+    height: 3px;
+    transition: 0.5s;
+}
+.active-nav {
+    color: rgb(204, 67, 17) !important;
+}
+.active-nav::after{
+    content: '';
+    display: block;
+    background-color: rgb(204, 67, 17);
+    margin: auto;
+    height: 3px;
+}
+.nav-link:hover::after {
+    width: 100%;
+}
+.admin-panel-btn {
+    background-color: orangered;
+    color: white;
+    font-weight: 600;
+}
+
+/* Media query for mobile devices  */
+@media only screen and (max-width:575px) {
+    .nav-link,.navbar-brand {
+        font-size: 13px;
+    }
+    .nav-link {
+        padding-top: 2px;
+        padding-bottom: 2px;
+    }
+    .user-name {
+        font-size: 13px;
+    } 
+    .logout-btn {
+        font-size: 13px;
+    }
+}
+
+/* Media query for larger devices */
+@media only screen and (max-width:991px) {
+    .user {
+        flex-direction: column;
+    }
+    .navbar-toggler-icon {
+        font-size: 15px;
+    }
+    .navbar-brand img {
+        width: 50px;
+    }
+}
