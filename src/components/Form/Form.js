@@ -11,7 +11,9 @@ const Form = (props) => {
 
   //   Find if this is already booked
   useEffect(() => {
-    fetch(`https://fast-gorge-50252.herokuapp.com/booked?userEmail=${user.email}&&id=${_id}`)
+    fetch(
+      `https://fast-gorge-50252.herokuapp.com/booked?userEmail=${user.email}&&id=${_id}`
+    )
       .then((res) => res.json())
       .then((data) => setCheckOrder(Boolean(data.res)));
   }, [_id, user.email]);
@@ -25,13 +27,25 @@ const Form = (props) => {
       headers: {
         "content-type": "application/json",
       },
+      body: JSON.stringify({
+        id: _id,
+        userName: user.displayName,
+        userEmail: user.email,
+        destinationName: name,
+        price: price,
+        days: days,
+        nights: nights,
+        phone: phone,
+        address: address,
+        status: "PENDING",
+      })
     })
       .then((res) => res.json())
       .then((data) => {
-        setCheckOrder(data)
+        setCheckOrder(data);
         props.added();
-        phoneRef.current.value = '';
-        addressRef.current.value = '';
+        phoneRef.current.value = "";
+        addressRef.current.value = "";
       });
   };
 
